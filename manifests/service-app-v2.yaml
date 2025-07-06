@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-v2
+  namespace: monitoring
+  labels:
+    app: my-app
+    version: v2
+spec:
+  selector:
+    app: my-app
+    version: v2
+  ports:
+  - name: web
+    port: 8000
+    targetPort: 8000
+
