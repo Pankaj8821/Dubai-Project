@@ -10,7 +10,8 @@ We have created a CI/CD pipeline using GitHub Actions, which utilizes AWS and Do
 
 
 # Infrastructure Tree Diagram for Dubai-Project
-![image](https://github.com/user-attachments/assets/634ab658-9fb8-4033-a1a0-3baf461a0fa8)
+![image](https://github.com/user-attachments/assets/c479a72e-8d44-4038-be99-a006eb791ba7)
+
 
 # TERRAFORM
 # Create  S3 bucket  :
