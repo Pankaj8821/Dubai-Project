@@ -10,6 +10,8 @@ We have created a CI/CD pipeline using GitHub Actions, which utilizes AWS and Do
 
 
 # Infrastructure Tree Diagram for Dubai-Project
+![image](https://github.com/user-attachments/assets/634ab658-9fb8-4033-a1a0-3baf461a0fa8)
+
 
 Dubai-Project/
 ├── main.tf
