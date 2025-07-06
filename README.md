@@ -28,28 +28,28 @@ Enable versioning and encryption (recommended for Terraform)
        --versioning-configuration Status=Enabled
 
 # Enable server-side encryption:
-   aws s3api put-bucket-encryption \
-   --bucket my-eks-terraform-state \
-   --server-side-encryption-configuration '{
-     "Rules": [{
-        "ApplyServerSideEncryptionByDefault": {
-         "SSEAlgorithm": "AES256"
-       }
-     }]
-   }'
+         aws s3api put-bucket-encryption \
+         --bucket my-eks-terraform-state \
+         --server-side-encryption-configuration '{
+           "Rules": [{
+              "ApplyServerSideEncryptionByDefault": {
+               "SSEAlgorithm": "AES256"
+             }
+           }]
+         }'
 
 
 # Create DynamoDB Table for State Locking
-   
-   aws dynamodb create-table \
-   --table-name terraform-lock-table \
-   --attribute-definitions AttributeName=LockID,AttributeType=S \
-   --key-schema AttributeName=LockID,KeyType=HASH \
-   --billing-mode PAY_PER_REQUEST \
-   --region us-west-2
+         
+         aws dynamodb create-table \
+         --table-name terraform-lock-table \
+         --attribute-definitions AttributeName=LockID,AttributeType=S \
+         --key-schema AttributeName=LockID,KeyType=HASH \
+         --billing-mode PAY_PER_REQUEST \
+         --region us-west-2
 
 # Verify Table Created
-   aws dynamodb list-tables --region us-west-2
+         aws dynamodb list-tables --region us-west-2
 
 # NOW #  Ready to Use with Terraform
   -- backend.tf 
