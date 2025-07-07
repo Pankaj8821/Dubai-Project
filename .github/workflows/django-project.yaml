@@ -1,6 +1,6 @@
 
 
-name: Build and Push Docker Image
+name: Build and Push Docker Image1
 
 on:
   push:
